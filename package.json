@@ -1,0 +1,19 @@
+{
+  "name": "tg-fullstack-experiment",
+  "version": "1.0.0",
+  "description": "UI framework experiment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhsu99/TG-Fullstack-Experiment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hhsu99/TG-Fullstack-Experiment/issues"
+  },
+  "homepage": "https://github.com/hhsu99/TG-Fullstack-Experiment#readme"
+}
