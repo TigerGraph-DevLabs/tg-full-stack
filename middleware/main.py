@@ -26,9 +26,37 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/listPatients_Infected_By")
+def readListPatients_Infected_By():
+    gQuery = conn.runInstalledQuery("listPatients_Infected_By", {"p":2000000205})[0]['Infected_Patients']
+    count = 0
+    children = []
+    for p in gQuery:
+        children.append({
+        "children": [],
+        "collapsed": True,
+        "id": str(count),
+        "name": p[-3:] + "Patient",
+        
+        })
+        count+=1
+    
+    result = {
+        "name": "205 ROOT",
+        "id": "root",
+        "children": children,
+        "style": {
+            "fill": "#FFDBD9",
+            "stroke":  "#FF6D67"
+        }
+    }
+    return result
+
+
+
+# @app.get("/items/{item_id}")
+# def read_item(item_id: int, q: Optional[str] = None):
+#     return {"item_id": item_id, "q": q}
 
 # @app.get("/edgeCrawl")
 # def getEdgeCrawl():
@@ -39,7 +67,6 @@ def read_item(item_id: int, q: Optional[str] = None):
 #         if( node.object["from_id"]):
 #     return result
 
-
 # @app.get("/allConnection")
 # def getAllConnection():
 #     data = {}
@@ -49,3 +76,7 @@ def read_item(item_id: int, q: Optional[str] = None):
 #         "id":""
 #     }
 #     return conn.runInstalledQuery("allConnection", {"p":4100000006})
+
+# @app.get("/allPersonId")
+# def getAllPersonId():
+#     return conn.getVertices("Patient")
