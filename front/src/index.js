@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App10 from './App10';
-// import App2 from './App2';
-// import App3 from './App3';
 import App from './App';
-// import App5 from './App5';
 
 import reportWebVitals from './reportWebVitals';
 
