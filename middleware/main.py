@@ -1,23 +1,23 @@
-import strawberry
+# import strawberry
 import typing
 import pyTigerGraph as tg
 import config as Credential
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from strawberry.asgi import GraphQL
+# from strawberry.asgi import GraphQL
 
-def get_users():
-    gQuery = conn.runInstalledQuery("listPatients_Infected_By", {"p":2000000205})[0]['Infected_Patients']
-    result = gQuery[0]
-    return [User(result)]
+# def get_users():
+#     gQuery = conn.runInstalledQuery("listPatients_Infected_By", {"p":2000000205})[0]['Infected_Patients']
+#     result = gQuery[0]
+#     return [User(result)]
 
-@strawberry.type
-class User:
-    id: str
+# @strawberry.type
+# class User:
+#     id: str
 
-@strawberry.type
-class Query:
-    users: typing.List[User]= strawberry.field(resolver=get_users)
+# @strawberry.type
+# class Query:
+#     users: typing.List[User]= strawberry.field(resolver=get_users)
 
 # @strawberry.type
 # class Query:
@@ -29,9 +29,9 @@ class Query:
 
 
 # To create the schema
-schema = strawberry.Schema(query=Query)
+# schema = strawberry.Schema(query=Query)
 
-graphql_app = GraphQL(schema)
+# graphql_app = GraphQL(schema)
 
 
 app = FastAPI()
@@ -62,8 +62,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_route("/graphql", graphql_app)
-app.add_websocket_route("/graphql", graphql_app)
+# app.add_route("/graphql", graphql_app)
+# app.add_websocket_route("/graphql", graphql_app)
 
 @app.get("/")
 def read_root():
