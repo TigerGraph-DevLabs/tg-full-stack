@@ -2,7 +2,7 @@
 
 **Demo of tg cloud full stack**
 
-1. Clone the repo
+1. Clone the repo<br>
    `git clone <repo_url>`
 
 2. navigate to front directory and install node_modules<br>
