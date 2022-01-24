@@ -5,19 +5,27 @@
 1. Clone the repo
    `git clone <repo_url>`
 
-2. navigate to front directory and install node_modules
-   `cd front`
-   `npm i`
+2. navigate to front directory and install node_modules<br>
 
-3. Run the front end code
+   ````
+   cd front
+   npm i```
+   ````
+
+3. Run the front end code<br>
    `npm start`
 
-4. Navigate to middleware directory and run the python virtual enviroment
-   `cd ../middleware`
-   `source venv/bin/activate`
+4. Navigate to middleware directory and run the python virtual enviroment<br>
 
-5. Create a TigerGraph Cloud Solution and make the credential python file contains HOST, USERNAME, PASSWORD, and GRAPHNAME
+   ````
+   cd ../middleware
+   source venv/bin/activate```
+   ````
 
-6. Install the libraries and run the middleware
-   `pip3 install -r requirements.txt`
-   `uvicorn main:app --reload`
+5. Create a TigerGraph Cloud Solution and make the credential python file contains HOST, USERNAME, PASSWORD, and GRAPHNAME<br>
+
+6. Install the libraries and run the middleware<br>
+   ````
+   pip3 install -r requirements.txt
+   uvicorn main:app --reload```
+   ````
