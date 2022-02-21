@@ -1,4 +1,4 @@
-# TG-Fullstack-Experiment
+# TG-Full-Stack
 
 **Demo of tg cloud full stack**
 
